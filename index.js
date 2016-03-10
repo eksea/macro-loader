@@ -46,6 +46,7 @@ Preprocessor.prototype._processDefinedMacro = function() {
 module.exports = function(content) {
 	this.cacheable && this.cacheable();
 	var queryString = loaderUtils.parseQuery(this.query);
+	var source = content;
 	var opt = {
 		file: queryString.config,
 		processor: null,
@@ -53,7 +54,7 @@ module.exports = function(content) {
 	};
 	if(opt.file) {
 		try {
-			opt.config = JSON.parse(fs.readFileSync(configFile));
+			opt.config = JSON.parse(fs.readFileSync(opt.file));
 		} catch(err) {
 			throw new Error('Macro Preprocessor Error: [CONFIG FILE ERR]' + err);
 		}
