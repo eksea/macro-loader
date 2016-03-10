@@ -1,0 +1,24 @@
+{
+  "name": "macro-loader",
+  "version": "1.0.0",
+  "description": "Macro Preprocessor for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/index.js"
+  },
+  "keywords": [
+    "macro",
+    "webpack",
+    "loader"
+  ],
+  "author": "Megrez <lujiajing1126@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "graceful-fs": "^4.1.3",
+    "loader-utils": "^0.2.12",
+    "lodash": "^4.6.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
