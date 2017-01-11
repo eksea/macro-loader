@@ -1,17 +1,21 @@
 {
-  "name": "macro-loader",
-  "version": "1.0.0",
+  "name": "macro-loader-ex",
+  "version": "0.0.1",
   "description": "Macro Preprocessor for webpack",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eksea/macro-loader"
   },
   "keywords": [
     "macro",
     "webpack",
     "loader"
   ],
-  "author": "Megrez <lujiajing1126@gmail.com>",
+  "author": "Jack",
   "license": "MIT",
   "dependencies": {
     "graceful-fs": "^4.1.3",
