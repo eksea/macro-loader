@@ -31,11 +31,11 @@ Preprocessor.prototype._processDefinedMacro = function() {
 		_.each(resArr,function(str) {
 			// has else
 			if(/#else/.test(str)) {
-				var tmp = str.match(/#ifdef (.*)\n([\s\S]*?)\n(?:#else\n)([\s\S]*?)\n#endif/i);
+				var tmp = str.match(/#ifdef (.*)\r?\n([\s\S]*?)\r?\n(?:#else\r?\n)([\s\S]*?)\r?\n#endif/i);
 				var macroTest = tmp[1];
 				self.source = self.source.replace(str,isSet(macroTest) ? tmp[2] : tmp[3]);
 			} else {
-				var tmp = str.match(/#ifdef (.*)\n([\s\S]*?)\n#endif/i);
+				var tmp = str.match(/#ifdef (.*)\r?\n([\s\S]*?)\r?\n#endif/i);
 				var macroTest = tmp[1];
 				self.source = self.source.replace(str,isSet(macroTest) ? tmp[2] : "");
 			}
